@@ -1,1 +1,1 @@
-web: gunicorn calented_server.wsgi
+web:gunicorn calented_server.wsgi
