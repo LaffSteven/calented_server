@@ -6,9 +6,9 @@ from .models import CalEvent
 
 
 class CalEventList(generics.ListCreateAPIView):
-    queryset = CalEvent.objects.all().order_by('id') # tell django how to retrieve all objects from the DB, order by id ascending
+    queryset = CalEvent.objects.all().order_by('date') # tell django how to retrieve all objects from the DB, order by date ascending
     serializer_class = CalEventSerializer # tell django what serializer to use
 
 class CalEventDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = CalEvent.objects.all().order_by('id')
+    queryset = CalEvent.objects.all().order_by('date')
     serializer_class = CalEventSerializer
